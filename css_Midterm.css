@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    height: 100%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+    height: 100%;
+}
+
+.header {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    background-color: rgb(15, 71, 15);
+    margin: 2px;
+    color: white;
+    font-weight: bold;
+}
+
+.header:hover::before,
+.header:hover::after {
+    content: "😊";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header:hover::before {
+    left: 28%;
+}
+
+.header:hover::after {
+    right: 28%;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 10px;
+    background-color: rgb(15, 71, 15);
+}
+
+.gallery div {
+    overflow: hidden;
+    background-color: rgb(108, 226, 108);
+    margin: 20px;
+    padding: 10px 5px 2px 5px;
+    border-radius: 40px;
+}
+
+.gallery div:hover{
+  border: 1px solid white;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s, opacity 0.3s;
+    border-radius: 40px;
+}
+
+.gallery img:hover {
+    transform: scale(1.2);
+    
+}
+
+.gallery div:hover img {
+    opacity: 1;
+}
+
+.gallery div img {
+    opacity: 1;
+}
+
+.gallery:hover div img {
+    opacity: 0.5;
+}
+
+.gallery:hover div:hover img {
+    opacity: 1;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 2px;
+    background-color: rgb(41, 231, 41);
+    padding: 10px;
+}
+
+
+.block {
+    padding: 20px;
+    transition: color 0.3s;
+    background-color: rgb(146, 182, 146);
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.block:hover::first-letter {
+    color: red;
+    font-size: 25px;
+}
